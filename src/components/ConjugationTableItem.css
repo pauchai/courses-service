@@ -1,0 +1,29 @@
+@keyframes swap-conj {
+    from {font-size: 0rem;}
+    to {font-size: 1rem;}
+    }
+@keyframes swap-conj-rev {
+    from {font-size: 1rem;}
+    to {font-size: 0rem;}
+}
+.animconj {
+    font-size: 1rem;
+}
+.animconj > ins, .animconj > del  {
+    text-decoration: None;
+    animation-name: swap-conj;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-delay: 2s;
+    animation-timing-function: linear; */
+    }
+.animconj > ins {
+    font-weight: bold;
+    color:#00ff00
+}
+.animconj > del {
+    color:#ff0000;
+    animation-name: swap-conj-rev;
+    /* animation-direction: alternate-reverse; */
+}
